@@ -1,9 +1,8 @@
 import argparse
 import time
-from rich.progress import track
 
 def countdown_timer(total_seconds):
-    while track(total_seconds):
+    while total_seconds > 0:
         mins, secs = divmod(total_seconds, 60)
         timer = '{:02d}:{:02d}'.format(mins, secs)
         print(timer, end="\r")
